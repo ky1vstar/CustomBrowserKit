@@ -72,14 +72,14 @@ let browserLogo = browser.thumbnail // UIImage of size 100x100
 ```objectivec
 for (NSNumber *wrappedBrowser in BKManager.availableBrowsers) {
 BKBrowser browser = (BKBrowser)wrappedBrowser.intValue;
-NSLog(@"%@ is available", BKBrowserGetName(browser));
+    NSLog(@"%@ is available", BKBrowserGetName(browser));
 }
 ```
 
 **Swift**
 ```swift
 for browser in BKManager.availableBrowsers {
-print("\(browser.name) is available")
+    print("\(browser.name) is available")
 }
 ```
 
@@ -89,9 +89,9 @@ print("\(browser.name) is available")
 NSURL *url = [NSURL URLWithString:@"https://google.com/"];
 
 if ([BKManager openURL:url withBrowser:BKBrowserOpera]) {
-NSLog(@"did open url successfully");
+    NSLog(@"did open url successfully");
 } else {
-NSLog(@"did fail to open url");
+    NSLog(@"did fail to open url");
 }
 ```
 
@@ -100,9 +100,9 @@ NSLog(@"did fail to open url");
 let url = URL(string: "https://google.com/")!
 
 if BKManager.open(url, with: .opera) {
-print("did open url successfully")
+    print("did open url successfully")
 } else {
-print("did fail to open url")
+    print("did fail to open url")
 }
 ```
 
@@ -113,9 +113,9 @@ NSURL *url = [NSURL URLWithString:@"https://google.com/"];
 
 // BKManager will try to open URL in Opera. If Opera Mini turns out to not be installed or available, BKManager will try to open URL in Google Chrome.
 if ([BKManager openURL:url withBrowser:BKBrowserOpera fallbackToBrowser:BKBrowserChrome]) {
-NSLog(@"did open url successfully");
+    NSLog(@"did open url successfully");
 } else { // if both Opera Mini and Google Chrome are not available
-NSLog(@"did fail to open url");
+    NSLog(@"did fail to open url");
 }
 ```
 
@@ -125,9 +125,9 @@ let url = URL(string: "https://google.com/")!
 
 // BKManager will try to open URL in Opera. If Opera Mini turns out to not be installed or available, BKManager will try to open URL in Google Chrome.
 if BKManager.open(url, with: .opera, fallbackTo: .chrome) {
-print("did open url successfully")
+    print("did open url successfully")
 } else { // if both Opera Mini and Google Chrome are not available
-print("did fail to open url")
+    print("did fail to open url")
 }
 ```
 
@@ -144,9 +144,9 @@ NSUserDefaults *userDefaults = NSUserDefaults.standardUserDefaults;
 NSString *browserIdentifier = [userDefaults stringForKey:@"savedBrowser"];
 BKBrowser savedBrowser;
 if (browserIdentifier) {
-savedBrowser = BKBrowserFromIdentifier(browserIdentifier);
+    savedBrowser = BKBrowserFromIdentifier(browserIdentifier);
 } else {
-savedBrowser = BKBrowserInAppSafari;
+    savedBrowser = BKBrowserInAppSafari;
 }
 ```
 
@@ -161,9 +161,9 @@ userDefault.set(browser.identifier, forKey: "savedBrowser")
 // restoring
 let savedBrowser: BKBrowser
 if let browserIdentifier = userDefault.string(forKey: savedBrowser) {
-savedBrowser = BKBrowser(identifier: browserIdentifier)
+    savedBrowser = BKBrowser(identifier: browserIdentifier)
 } else {
-savedBrowser = .inAppSafari
+    savedBrowser = .inAppSafari
 }
 ```
 
