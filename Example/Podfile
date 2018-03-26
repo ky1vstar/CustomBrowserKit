@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'CustomBrowserKit_Example' do
+  pod 'CustomBrowserKit', :path => '../'
+
+end

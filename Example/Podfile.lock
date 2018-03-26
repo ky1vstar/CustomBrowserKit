@@ -1,0 +1,16 @@
+PODS:
+  - CustomBrowserKit (0.1.0)
+
+DEPENDENCIES:
+  - CustomBrowserKit (from `../`)
+
+EXTERNAL SOURCES:
+  CustomBrowserKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CustomBrowserKit: 8ab6bed1bc2c3819a1abfca5eab91c258923ac2f
+
+PODFILE CHECKSUM: c4ac3f28c5697f61cf8adb8d6b2b7bdfcaf6056f
+
+COCOAPODS: 1.4.0

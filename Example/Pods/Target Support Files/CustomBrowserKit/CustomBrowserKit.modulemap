@@ -1,0 +1,6 @@
+framework module CustomBrowserKit {
+  umbrella header "CustomBrowserKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
