@@ -35,7 +35,7 @@ static NSDictionary *browsersInfo;
       
       @(BKBrowserOpera): [BKBrowserInfo infoWithIdentifier:@"opera"
                                                       name:@"Opera Mini"
-                                                URLSchemes:@[@"opera://open-url?url=%@"]],
+                                                URLSchemes:@[@"opera-http://%@"]],
       
       @(BKBrowserUCBrowser): [BKBrowserInfo infoWithIdentifier:@"ucBrowser"
                                                           name:@"UC Browser"
